@@ -5,11 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class User extends Model
+class Post extends Model
 {
     use HasFactory;
 
-    protected $table = 'user';
-    public $timestamps = false;
+    protected $table = 'posts';
+    const CREATED_AT = 'added';
+    const UPDATED_AT = 'updated';
     protected $primaryKey = 'id';
 }
