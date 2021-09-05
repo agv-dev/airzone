@@ -28,4 +28,9 @@ class Post extends Model
     {
         return $this->belongsToMany(Comment::class, 'comment_post', 'blog', 'comment');
     }
+
+    public function users()
+    {
+        return $this->owner()->first()->writers();
+    }
 }

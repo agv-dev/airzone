@@ -58,3 +58,30 @@ I already set some configuration as the table name, primarykeys and son on...
 
 # 3rd Commit. Model-Relations
 
+I added the required relationships to the models as you can check looking at the changes of the 3rd commit in the app/Models/ folder
+
+# 4th Commit. API: Category Crud and showPosts endpoint
+
+I created an extra "users" relation at Post model and
+
+And I have also created the Controllers (CategoryController and PostController) by using artisan:
+
+  - php artisan make:controller CategoryController --resource --model=Category --api
+  - php artisan make:controller PostController --api --model=Post
+
+And I confirmed the routes by using:
+
+  - php artisan route:list
+
+In order to test the relations I used tinker and in order to test the API I used Postman (I will add a postman file called airzone.postman_collection.json at the root of the project with the export of the requests I made in order to allow you to check them)
+
+# Extra
+I forgot that sometimes, when you want to reestructure your project composer/dependencies, you can do it with:
+
+  - composer dump-autoload -o
+
+I also forget to tell how I inserted the data into the DB fromt the provided sql file... I simply created one DB using PhPMyadmin (But you can use "CREATE DATABASE airzone CHARACTER SET utf8 COLLATE utf8_general_ci;"...you can also create an user for this DB instead of using the root one, but it was not demanded) and import the file as:
+
+  - mysql -u root -p airzone < prueba_incorporacion.sql
+
+Of course I could create the migrations and also the factories/seeders. Specially, it will be helpful once I will need to create the environment (with setUp() and tearDown()) for testing, as far as I will need to migrate with refreshing and forcing each time in order to apply the correct seeds for ensure the DB data will match my request extepected return at each test.

@@ -1,0 +1,167 @@
+{
+	"info": {
+		"_postman_id": "13e0a0ce-c1ac-4417-b847-d1a43e0aef5b",
+		"name": "airzone",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "IndexCategory",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/airzone/public/api/categories",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"airzone",
+						"public",
+						"api",
+						"categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "showCategory",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/airzone/public/api/categories/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"airzone",
+						"public",
+						"api",
+						"categories",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "storeCategory",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/airzone/public/api/categories?name=Testing category&slug=test-category&visible=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"airzone",
+						"public",
+						"api",
+						"categories"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Testing category"
+						},
+						{
+							"key": "slug",
+							"value": "test-category"
+						},
+						{
+							"key": "visible",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateCategory",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/airzone/public/api/categories/3?name=Composer&slug=composer&visible=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"airzone",
+						"public",
+						"api",
+						"categories",
+						"3"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Composer"
+						},
+						{
+							"key": "slug",
+							"value": "composer"
+						},
+						{
+							"key": "visible",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "destroyCategory",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/airzone/public/api/categories/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"airzone",
+						"public",
+						"api",
+						"categories",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "showPosts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/airzone/public/api/posts/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"airzone",
+						"public",
+						"api",
+						"posts",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

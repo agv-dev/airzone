@@ -12,6 +12,7 @@ class Category extends Model
     protected $table = 'categories';
     public $timestamps = false;
     protected $primaryKey = 'id';
+    protected $fillable = ['name','slug'];
 
     public function posts()
     {
