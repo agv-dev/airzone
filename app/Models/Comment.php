@@ -12,4 +12,14 @@ class Comment extends Model
     protected $table = 'comments';
     public $timestamps = false;
     protected $primaryKey = 'id';
+
+    public function post()
+    {
+        return $this->belongsToMany(Post::class, 'comment_post', 'comment', 'blog');
+    }
+
+    public function writer()
+    {
+        return $this->belongsTo(User::class, 'user');
+    }
 }

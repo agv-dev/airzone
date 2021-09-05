@@ -12,4 +12,9 @@ class Category extends Model
     protected $table = 'categories';
     public $timestamps = false;
     protected $primaryKey = 'id';
+
+    public function posts()
+    {
+        return $this->belongsToMany(Post::class, 'category_post', 'category', 'blog');
+    }
 }
